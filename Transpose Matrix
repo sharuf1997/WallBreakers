@@ -1,0 +1,13 @@
+class Solution(object):
+    def transpose(self, A):
+        """
+        :type A: List[List[int]]
+        :rtype: List[List[int]]
+        """
+        L = len(A)
+        W = len(A[0])
+        ans = [[None] * L for _ in xrange(W)]
+        for l, row in enumerate(A):
+            for w, val in enumerate(row):
+                ans[w][l] = val
+        return ans
